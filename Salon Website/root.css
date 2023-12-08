@@ -21,6 +21,7 @@ html, body{
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     overflow-x: hidden;
+    overflow-x: visible;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialisend;
     background-color: #000;
