@@ -19,7 +19,8 @@ html, body{
     font-size: 16px;
     /* min-height: 100%; */
     -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
+    -webkit-touch-callout: none;{
+    overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialisend;
     background-color: #000;
@@ -611,6 +612,6 @@ footer p:hover{
 nav,.nav2_1,.body,.body3,.body4,footer{
     overflow-x: hidden;
 }
-body{
+/* body{
     overflow-x: hidden;
-}
+} */
