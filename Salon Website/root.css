@@ -11,6 +11,8 @@ html{
     background-color: #000;
     /* height: 100%; */
     line-height: 2.5;
+    overflow-x: hidden;
+    overflow-y: scroll;
     box-sizing: border-box;
     color: #fff;
 }
@@ -608,7 +610,9 @@ footer p:hover{
 @media only screen and (max-width: 750px) {
     /* Your CSS styles for mobile devices go here */
   }
-
+/* nav,.nav2_1,.body,.body3,.body4,footer{
+    overflow-x: hidden;
+} */
 body{
     overflow-x: hidden;
 }
