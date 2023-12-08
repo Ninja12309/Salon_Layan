@@ -1,618 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,500;1,100&family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,500;1,100&family=Playfair+Display&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family: "slick",sans-serif; */
-}
-html{
-    background-color: #000;
-    /* height: 100%; */
-    line-height: 2.5;
-    box-sizing: border-box;
-    color: #fff;
-}
-html, body{
-    font-family: "Lato",sans-serif;
-    font-size: 16px;
-    /* min-height: 100%; */
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    overflow-x: hidden;
-    overflow-x: visible;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialisend;
-    background-color: #000;
-}
-
-nav{
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 200;
-    height: 40px;
-}
-.nav1{
-    margin-left: 12vw;
-    font-size: .7rem;
-    /* font-weight: 700; */
-    /* font-family: "slick"; */
-    /* padding-bottom:/ px; */
-    /* text-decoration: underline #d0037c; */
-}
-.nav2{
-    position: relative;
-    display: flex;
-    gap: 40px;
-    font-size: .7rem;
-    line-height: normal;
-    margin-right: 12vw;
-    text-decoration: underline #d0037c;
-    font-weight: 700;
-}
-.nav2_1{
-    font-size: .7rem;
-    display: flex;
-    justify-content: center;
-    gap: 10vw;
-    
-}
-.nav_inside{
-    margin: 1rem 0;
-    display: flex;
-    gap: 3vw;
-    letter-spacing: .1rem;
-    cursor: pointer;
-
-}
-.dandi{
-    color: #d0037c;
-    font-size: 20px;
-    position: relative;
-    bottom: 10px;
-    cursor: pointer;
-}
-.hovereffect:hover{
-    color: #d0037c;
-    text-decoration: underline;
-    transition: all .5s ease;
-}
-button{
-    padding: 10px;
-    border: none;
-    border-radius: 2px;
-    position: relative;
-    z-index: 2;
-    background-color: #000;
-    color: white;
-    letter-spacing: .1rem;
-    font-weight: 400;
-    cursor: pointer;
-}
-
-button::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 7%;
-    width: 0%;
-    z-index: -1;
-    background-color: #d0037c;
-    transition: transform 0.5s ease;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-button:hover::before{
-    width: 100%;
-    transform: scaleX(1);
-}
-
-.service:hover{
-    height: auto;
-    width: auto;
-    background-color: white;
-}
-.service:hover .list-item{
-    opacity: 1;
-    color: black;
-    font-weight: 500;
-    transition: opacity 1s ease;
-}
-.service:hover span:hover{
-    color: #d0037c;
-}
-.list-item{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 10px;
-    font-weight: 500;
-    opacity: 0;
-    /* transition: opacity 1s ease; */
-}
-.partner:hover{
-    height: auto;
-    width: auto;
-    background-color: #fff;
-}
-.parnter-item{
-    display: none;
-    color: black;
-    font-weight: 600;
-    text-decoration: none;
-    flex-direction: column;
-    position: relative;
-    letter-spacing: 1px;
-    left: 10px;
-    transition: all 1s ease;
-    /* color: #d0037c; */
-}
-.partner:hover .parnter-item{
-    display: flex;
-}
-.partner:hover span:hover{
-    color: #d0037c;
-}
-.body{
-    display: flex;
-    mix-blend-mode: difference;
-    z-index: 99;
-}
-
-.lbody{
-    width: 30vw;
-}
-.rbody{
-    width: 70vw;
-    mix-blend-mode: difference;
-    z-index: 99;
-}
-.rbody .logo{
-    display: flex;
-    font-size: 5rem;
-    gap: 50px;
-}
-.llogo{
-    height: auto;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    /* bottom: 12vw; */
-    /* flex-direction: column; */
-
-}
-.discount h1{
-    mix-blend-mode: difference;
-    z-index: 99;
-}
-.discount{
-    display: flex;
-    justify-content: center;
-    z-index: 99;
-    
-    mix-blend-mode: difference;
-}
-.services h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 200;
-}
-.tandc{
-    display: flex;
-    justify-content: end;
-    margin-right: 20vw;
-}
-.llogo h1{
-    font-size: 6rem;
-    position: relative;
-    display: flex;
-    bottom: 10px;
-    left: 10vw;
-    color: #fff;
-    overflow: hidden;
-}
-.llogo h1 span{
-    -webkit-text-stroke: 3px #ffffff;
-    color: transparent;
-    font-weight: 700;
-    letter-spacing: 0.5em;
-    position: relative;
-    display: block;
-}
-
-
-.llogo h1 span::before{
-    content: attr(data-feo);
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #fff;
-    transform: translateY(-110%);
-}
-.rlogo{
-    position: relative;
-    bottom: 5rem
-}
-.body2{
-    margin-left: 50px;
-    height: 100vh;
-    width: 50vw;
-    mix-blend-mode: difference;
-}
-#LuLu{
-    /* height: 20px; */
-    position: relative;
-    left: 10vw;
-    z-index: -1;
-    top: 20px;
-}
-.lbody2{
-    mix-blend-mode: difference;
-}
-.lbody2 h1:nth-child(1){
-    width: 350px;
-    position: relative;
-    top: 20px;
-    text-align: center;
-}
-.lbody2 h1:nth-child(2){
-    width: 350px;
-    position: relative;
-    /* top: 20px; */
-    text-align: center;
-}
-.lbodybottom{
-    margin-left: 18px;
-    width: 40vw;
-}
-.lbodybottom button{
-    margin-top: 20px;
-    color: #ffffff;
-    border: 2px solid #d0037c;
-    /* background-color: ; */
-    background-color:#d0037c ;
-    border-radius: 0;
-}
-
-.lbodybottom button:hover{
-    background-color: #000;
-    border: 2px solid #fff;
-}
-nav:nth-child(1){
-    position: sticky;
-    top: 0;
-    z-index: 99;
-}
-.body3{
-    height: 80vh;
-    background-color: #e2e2e2;
-}
-.body3_1 h1{
-    text-align: center;
-    color: #000000;
-    margin-top: 20px;
-    font-weight: 600;
-}
-.body3_2{
-    color: #d0037c;
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    bottom: 70px;
-}
-.body3_3{
-    position: relative;
-    bottom: 80px;
-    color: #000;
-    /* width: 50vw; */
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.body3_4{
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    align-items: center;
-    position: relative;
-    bottom: 30px;
-}
-.body3_4 .portion1{
-    height: 280px;
-    width: 220px;
-    background-color: #ffffff;
-}
-.body3_4 .portion2{
-    height: 280px;
-    width: 220px;
-    background-color: #ffffff;
-}
-.body3_4 .portion3{
-    height: 280px;
-    width: 220px;
-    background-color: #ffffff;
-}
-.portion1{
-    /* transform:scale(1) ; */
-    transition: transform 1s ease;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-.body3_4{
-    overflow: hidden;
-}
-.portion1_1{
-    overflow: hidden;
-}
-.portion1_1 img{
-    height: 250px;
-    width: 220px;
-}
-.portion1_2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.portion1_2 p{
-    color: #d0037c;
-    position: absolute;
-    left: 20%;
-    transform: translate(50%,0);
-    bottom: 0;
-    text-align: center;
-    font-weight: 600;
-}
-.portion2,.portion3{
-    position: relative;
-}
-.portion2_1 img,.portion3_1 img{
-    height: 250px;
-    width: 220px;
-}
-.portion2_2,.portion3_2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.portion3_2 p{
-    color: #d0037c;
-    position: absolute;
-    left: 20%;
-    transform: translate(50%,0);
-    bottom: 0;
-    text-align: center;
-    font-weight: 600;
-}
-.portion2_2 p{
-    color: #d0037c;
-    position: absolute;
-    /* left: 10%; */
-    transform: translate(10%,0);
-    bottom: 0;
-    text-align: center;
-    font-weight: 600;
-}
-.portion2,.portion3{
-    cursor: pointer;
-    transition: transform 1s ease;
-}
-.portion1:hover,.portion2:hover,.portion3:hover{
-    transform:scale(1.3) ;
-    animation: transform 2s ease;
-}
-.body4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    width: 100vw;
-    background-color: #000000;
-}
-.body4_1{
-    width: 400px;
-     height: 500px; 
-}
-.body4_2{
-    width: 50vw;
-}
-.body4_2 button{
-    border: 2px solid #fff;
-    margin: 20px;
-}
-.body4_2 button:hover{
-    background-color: white;
-    border: 2px solid black;
-    color: black;
-}
-.fa-solid{
-    display: none;
-}
-footer{
-    height: 40vh;
-    width: 100vw;
-    color: #000;
-    background-color: #e2e2e2;
-}
-.footer1{
-    margin:0 6vw;
-}
-.footer2{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-}
-footer p:hover{
-    color: #d0037c ;
-    cursor: pointer;
-}
-.mouse{
-    height: 10px;
-    background-color: rgb(255, 255, 255);
-    width: 10px;
-    position: absolute;
-    border-radius: 50%;
-    /* z-index: -1; */
-}
-
-@media only screen and (max-width: 500px) {
-    .lbody{
-        display: none;
-    }
-    .logo{
-        display: block;
-        width: 100vw;
-        display: block;
-        display: flex;
-        flex-wrap: wrap;
-        /* background-color: red; */
-    }
-    .rbody{
-        height: 80vh;
-        padding-top: 10vh;
-        width: 100vw;
-    }
-    .llogo span{
-        font-size: 4rem;
-    }
-    .rlogo span{
-        text-align: center;
-        position: relative;
-        left: 30vw;
-        bottom: 8vh;
-        font-size: 3rem;
-    }
-    .discount h1 , .services h1 , .tandc {
-        font-size: 1rem;
-        position: relative;
-        /* left: 5vh; */
-        bottom: 10vh;
-    }
-    .tandc{
-        position: relative;
-        right: 15vw;
-    }
-    .lbodytop h1{
-        font-size: 2rem;
-    }
-    .lbodybottom{
-        width: 100vw;
-        /* background-color: red; */
-        position: relative;
-        right: 10vw;
-        padding: 0 10px;
-    }
-    .lbodybottom  button{
-        display: flex;
-        justify-self: center;
-        align-items: center;
-    }
-    .body3{
-        height: 200vh;
-    }
-    .body3_4{
-        flex-wrap: wrap;
-    }
-    #body4{
-        flex-wrap: wrap;
-    }
-    .body4_2{
-        font-size: 1rem;
-        position: relative;
-        bottom: 10vh;
-        width: 100vw;
-        /* background-color: red; */
-        text-align: center;
-        padding: 10px;
-    }
-    .body2{
-        height: 100vh;
-        width: 100vw;
-        position: relative;
-        right: 5vw;
-        /* background-color: red; */
-    }
-    .mouse{
-        display: none;
-    }
-    .body4_2 h1{
-        font-size: 1.5rem;
-    }
-    .body4_2 p{
-        font-size: .8rem;
-    }
-    .CUSTOMERr{
-        display: none;
-    }
-    .carrer{
-        display: none;
-
-    }
-    .legal{
-        display: none;
-    }
-    .FIND{
-        display: none;
-
-    }
-    .footer1 p{
-        text-align: center;
-    }
-    footer{
-        height: auto;
-    }
-    #nav_inside_id{
-        position: absolute;
-        background-color: rgb(0, 0, 0);
-        top: 23px;
-        display: flex;
-        display: none;
-        gap: 40px;
-        flex-direction: column;
-        z-index: 99;
-        right: 0;
-        height: 100vh;
-        transition: all 5s ease;
-    }
-    .service span{
-        display: none
-    };
-    .hovereffect span{
-        display: none;
-    }
-    .dandi{
-        display: none;
-    }
-    .nav1,.nav2{
-        font-size: .5rem;
-    }
-    .fa-solid{
-        display: block;
-        position: relative;
-        left: 5vw;
-        cursor: pointer;
-        font-size: .9rem;
-    }
-    .service:hover{
-        height: auto;
-        width: auto;
-        background-color: rgb(0, 0, 0);
-    }
-}
-@media only screen and (max-width: 750px) {
-    /* Your CSS styles for mobile devices go here */
-  }
-/* nav,.nav2_1,.body,.body3,.body4,footer{
-    overflow-x: hidden;
-} */
-/* body{
-    overflow-x: hidden;
-} */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layan Salon</title>
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="hairdresser-beauty-salon-logo-scissors-sign-vector-illustration-2E8MM7C.jpg"/>
+    <link rel="stylesheet" href="root.css">
+</head>
+<body>
+    <nav>
+        
+        <div class="mouse"></div>
+        <div class="nav1">
+            Layan SALON
+        </div>
+        <div class="nav2">
+            <span>CONTACT US</span>
+            <span>SALON LOCATOR</span>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+    </nav>
+    <div class="nav2_1">
+        <div class="nav_inside" id="nav_inside_id">
+            <div class="hovereffect service"><button>SERVICES</button><div class="list-item">
+                <span>SKIN</span>
+                <span>HAIR</span>
+                <span>MAKE-UP</span>
+            </div></div>
+            <div class="hovereffect"><button>BRIDAL </button></div>
+            <div class="hovereffect"><button>SHOP PRODUCTS</button></div>
+            <div class="hovereffect"><button>RUNWAY REWARDS</button></div>
+            <div class="hovereffect"><button>OFFERS</button></div>
+            <div class="hovereffect"><button>BOOK APPOINTMENT</button></div>
+            <div class="dandi hovereffect"><button>|</button></div>
+            <div class="hovereffect partner"><button>BECOME A PARTNER</button><div class="parnter-item">
+                <span>Franchisee Criteria</span>
+                <span>Layan advantage</span>
+                <span>Success Stories</span>
+            </div></div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="lbody">
+            <img id="LuLu" src="cartoonize_black.jpg" alt="">
+        </div>
+        <div class="rbody">
+            <div class="logo">
+                <section class="llogo">
+                    <h1>
+                    <span data-feo="L">L</span>
+                    <span data-feo=".">A</span>
+                    <span data-feo="Y">Y</span>
+                    <span data-feo=".">A</span>
+                    <span data-feo="N">N</span>
+                </h1>
+                </section>
+                <div class="rlogo">
+                    <span>SALON</span>
+                </div>
+            </div>
+            <div class="discount">
+                <h1>#ENJOY 25% OFF</h1>
+            </div>
+            <div class="services">
+                <h1>ACCROSS FACE SERVICES</h1>
+            </div>
+            <div class="tandc">
+                *T&C APPLY
+            </div>
+        </div>
+    </div>
+    <div class="body2">
+        <div class="lbody2">
+            <div class="lbodytop">
+                <h1>WHAT'S TRENDING? </h1>
+                <h1> UFF TERI ADA LOOK</h1>
+            </div>    
+            <div class="lbodybottom">
+                <p>The Uff Teri Ada look from our Blockbuster Brides collection is designed for the coy bride whose excitement at her sangeet is palpable but measured. She is a vision of pure radiance as she prepares to embark on this new journey in her life.</p>
+                <br>
+                <p>The shades of mint green that this stunning bride adorns befits her strong sense of individuality and independence.</p>
+                <br>
+                <p>Check out our complete Blockbuster Bridal Collection.</p>
+            </div>
+            <div class="lbodybottom">
+                <button>
+                    READ MORE
+                </button>
+            </div>
+        </div>    
+    </div>
+    <div class="body3">
+        <div class="body3_1">
+            <h1>
+                RECOMMENDED SERVICES
+            </h1>
+        </div>
+        <div class="body3_2">
+            <h1>-</h1>
+        </div>
+        <div class="body3_3">
+            <p>
+            Our runway experts have curated some of the most popular services at Layan Salon, just for you.
+            <br>
+            Take your pick and head to your nearest salon and get started on your makeover!
+            </p>
+        </div>
+        <div class="body3_4" id="img_height">
+            <div class="portion1">
+                <div class="portion1_1">
+                    <img src="https://skinkraft.com/cdn/shop/articles/Applying-wax-to-a-young-woman_s-leg-for-hair-removal_1024x400.jpg?v=1658830857" alt="">
+                </div>
+                <div class="portion1_2">
+                   <p>Waxing</p>
+                </div>
+            </div>
+            <div class="portion2">
+                <div class="portion2_1">
+                    <img src="https://www.taymedispa.co.uk/wp-content/uploads/2016/11/facials-1024x630.jpg" alt="">
+                </div>
+                <div class="portion2_2">
+                   <p>Facial Treatment</p>
+                </div>
+            </div>
+            <div class="portion3">
+                <div class="portion3_1">
+                    <img src="https://somavita.co.uk/wp-content/uploads/2022/02/pexels-andrea-piacquadio-3757952-holistic-massage.jpg" alt="">
+                </div>
+                <div class="portion3_2">
+                   <p>Massage</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body4" id="body4">
+        <div class="body4_1">
+            <img src="https://images.squarespace-cdn.com/content/v1/5e7f171c9795e7339c896a06/1588711796366-RBFQC0JELH5CKZ1UY99A/gift-card.jpg?format=1500w" alt="">
+        </div>
+        <div class="body4_2">
+            <h1>GIFT CARDS FOR YOUR LOVED ONES</h1>
+            <p>
+                We know how difficult it is to think of a thoughtful gift for a loved one. How about gifting them some much-needed pampering? Get them a Layan Salon gift card today!
+            </p>
+            <button>
+                BUY NOW
+            </button>
+            <p>*Terms & Conditions apply</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer1">
+            <hr>
+            <p>Layan Salon</p>
+            <hr>
+        </div>
+        <div class="footer2">
+            <div class="aboout">
+                <p>ABOUT US</p>
+                <p>Stay up to date</p>
+                <p><i class="fa-brands fa-facebook"></i> FaceBook</p>
+                <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+                <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+            </div>
+            <div class="FIND">
+                <p>FIND US</p>
+            </div>
+            <div class="carrer">
+                <p>CARRER</p>
+            </div>
+            <div class="CUSTOMERr">
+                <p>CUSTOMER SERVICES</p>
+                <p>contact us</p>
+            </div>
+            <div class="legal">
+                <p>LEGAL</p>
+                <p>Studio-Terms & Conditions</p>
+                <p>Cookie Notice</p>
+                <p>Terms & Conditions</p>
+                <p>Sitemap</p>
+            </div>
+        </div>
+        <div class="footer3"></div>
+        <h6 style="text-align: center; position: relative; top: 4px;">Design and Developed BY TOUFEEQ</h6>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
+    <script src="root.js"></script>
+</body>
+</html>
